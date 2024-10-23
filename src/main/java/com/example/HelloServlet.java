@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-@WebServlet("/hello")
+//@WebServlet("/hello")
 public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
