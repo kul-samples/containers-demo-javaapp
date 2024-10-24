@@ -18,7 +18,7 @@ FROM tomcat:10.1.31-jdk11
 WORKDIR /usr/local/tomcat
 
 # Copy the built WAR file from the build stage to the Tomcat webapps directory
-COPY --from=build /app/target/kmayer-1.0.war /usr/local/tomcat/webapps/kmayer.war
+COPY --from=build /app/target/kmayer-1.0.war /usr/local/tomcat/webapps/welcome.war
 
 # Expose the default port for Tomcat
 EXPOSE 8080
