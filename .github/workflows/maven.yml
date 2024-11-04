@@ -42,5 +42,5 @@ jobs:
 
     - name: Push Docker Image
       run: |
-        docker image tag javaapp:latest ghcr.io/kul-samples/javawelcomeapp:v1
-        docker image push ghcr.io/kul-samples/javawelcomeapp:v1
+        docker image tag javaapp:latest ghcr.io/kul-samples/javawelcomeapp:v2
+        docker image push ghcr.io/kul-samples/javawelcomeapp:v2
