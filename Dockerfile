@@ -14,14 +14,24 @@ RUN mvn clean package
 # Use the official Tomcat image
 FROM tomcat:10.1.31-jdk11
 
+# Install PostgreSQL client in the Tomcat image
+RUN apt-get update && apt-get install -y postgresql-client && rm -rf /var/lib/apt/lists/*
+
 # Set the working directory for Tomcat
 WORKDIR /usr/local/tomcat
 
 # Copy the built WAR file from the build stage to the Tomcat webapps directory
-COPY --from=build /app/target/kmayer-1.0.war /usr/local/tomcat/webapps/welcome.war
+COPY --from=build /app/target/kmayer-1.0.war /usr/local/tomcat/webapps/kmayer.war
 
 # Expose the default port for Tomcat
 EXPOSE 8080
+
+# Set environment variables for PostgreSQL connection
+ENV PGHOST=postgres-container
+ENV PGDATABASE=postgres
+ENV PGPORT=5432
+ENV PGUSER=postgres
+ENV PGPASSWORD=root
 
 # Start the Tomcat server
 CMD ["catalina.sh", "run"]
