@@ -27,11 +27,11 @@ COPY --from=build /app/target/kmayer-1.0.war /usr/local/tomcat/webapps/kmayer.wa
 EXPOSE 8080
 
 # Set environment variables for PostgreSQL connection
-ENV PGHOST=postgres-container
+ENV PGHOST=postgres
 ENV PGDATABASE=postgres
 ENV PGPORT=5432
 ENV PGUSER=postgres
-ENV PGPASSWORD=root
+ENV PGPASSWORD=password
 
 # Start the Tomcat server
 CMD ["catalina.sh", "run"]
