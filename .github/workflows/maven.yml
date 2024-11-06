@@ -10,7 +10,7 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main","dev2" ]
   pull_request:
     branches: [ "main" ]
 
@@ -42,5 +42,5 @@ jobs:
 
     - name: Push Docker Image
       run: |
-        docker image tag javaapp:latest ghcr.io/kul-samples/javawelcomeapp:v1
+        docker image tag javaapp:latest ghcr.io/kul-samples/javawelcomeapp:v3
         docker image push ghcr.io/kul-samples/javawelcomeapp:v1
