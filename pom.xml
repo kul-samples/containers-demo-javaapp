@@ -12,6 +12,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <sonar.organization>kulbhushanmayer</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.qualitygate.wait>true</sonar.qualitygate.wait>
     </properties>
     <dependencies>
 	<dependency>
