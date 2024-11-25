@@ -132,13 +132,13 @@ under the License.
     -->
     <server>
         <id>nexus-releases</id>
-        <username>nexus-user</username>
-        <password>nexus-user</password>
+        <username>admin</username>
+        <password>admin</password>
     </server>
     <server>
         <id>nexus-snapshots</id>
-        <username>nexus-user</username>
-        <password>nexus-user</password>
+        <username>admin</username>
+        <password>admin</password>
     </server>
     <!-- Another sample, using keys to authenticate.
     <server>
