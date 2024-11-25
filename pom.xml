@@ -41,12 +41,12 @@
     </distributionManagement>
     <profiles>
         <profile>
-            <id>nexus</id>
+            <id>nexus-releases</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <altDeploymentRepository>nexus-release::default::http://3.23.212.120:32136/repository/maven-releases/</altDeploymentRepository>
+                <altDeploymentRepository>nexus-releases::default::http://3.23.212.120:32136/repository/maven-releases/</altDeploymentRepository>
             </properties>
         </profile>
     </profiles>
