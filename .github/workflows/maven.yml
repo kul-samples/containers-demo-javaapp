@@ -30,7 +30,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Deploy to Nexus
-      run: mvn clean deploy -DskipTests=true -s settings.xml
+      run: mvn clean deploy -DskipTests=true -P nexus -s settings.xml
       env:
         NEXUS_URL: ${{ secrets.NEXUS_URL }}  # Nexus Repository URL
         NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}  # Nexus Username (set this secret in GitHub)
