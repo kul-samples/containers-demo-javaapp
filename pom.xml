@@ -39,7 +39,17 @@
             <url>http://3.23.212.120:32136/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
-
+    <profiles>
+        <profile>
+            <id>nexus</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <altDeploymentRepository>nexus::default::http://3.23.212.120:32136/repository/maven-releases/</altDeploymentRepository>
+            </properties>
+        </profile>
+    </profiles>
     <build>
         <plugins>
             <plugin>
