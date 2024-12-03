@@ -30,7 +30,7 @@
         </snapshotRepository>
 	<repository>
 	    <id>github</id>
-	    <url>https://maven.pkg.github.com/kul-samples</url>
+	    <url>https://maven.pkg.github.com/kul-samples/containers-demo-javaapp/</url>
 	</repository>
     </distributionManagement>
     <profiles>
@@ -49,7 +49,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <altDeploymentRepository>github::default::https://maven.pkg.github.com/kul-samples/</altDeploymentRepository>
+                <altDeploymentRepository>github::default::https://maven.pkg.github.com/kul-samples/containers-demo-javaapp/</altDeploymentRepository>
             </properties>
         </profile>
     </profiles>
