@@ -19,6 +19,40 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://3.23.212.120:32136/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://3.23.212.120:32136/repository/maven-snapshots/</url>
+        </snapshotRepository>
+	<repository>
+	    <id>github</id>
+	    <url>https://maven.pkg.github.com/kul-samples</url>
+	</repository>
+    </distributionManagement>
+    <profiles>
+        <profile>
+            <id>nexus-releases</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <altDeploymentRepository>nexus-releases::default::http://3.23.212.120:32136/repository/maven-releases/</altDeploymentRepository>
+            </properties>
+        </profile>
+        <profile>
+            <id>github</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <altDeploymentRepository>https://maven.pkg.github.com/kul-samples/</altDeploymentRepository>
+            </properties>
+        </profile>
+    </profiles>
 
     <build>
         <plugins>
