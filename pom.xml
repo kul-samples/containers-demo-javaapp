@@ -49,7 +49,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <altDeploymentRepository>https://maven.pkg.github.com/kul-samples/</altDeploymentRepository>
+                <altDeploymentRepository>github::default::https://maven.pkg.github.com/kul-samples/</altDeploymentRepository>
             </properties>
         </profile>
     </profiles>
