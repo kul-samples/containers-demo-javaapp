@@ -20,10 +20,10 @@
         </dependency>
     </dependencies>
     <distributionManagement>
-        <repository>
+<!--         <repository>
             <id>nexus-releases</id>
             <url>http://3.23.212.120:32136/repository/maven-releases/</url>
-        </repository>
+        </repository> -->
         <snapshotRepository>
             <id>nexus-snapshots</id>
             <url>http://3.23.212.120:32136/repository/maven-snapshots/</url>
